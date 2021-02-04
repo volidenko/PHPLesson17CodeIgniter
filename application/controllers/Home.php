@@ -155,10 +155,10 @@ class Home extends CI_Controller {
         $this->showCategories();
     }
 
-    public function setUserData(){
-        $this->session->deleteCategory($id);
-        $this->load->view("showSession");
+    // public function setUserData(){
+    //     $this->session->deleteCategory($id);
+    //     $this->load->view("showSession");
 
-        $this->showCategories();
-    }
+    //     $this->showCategories();
+    // }
 }
