@@ -12,15 +12,17 @@ class Home_model extends CI_Model
     return $res->result_array();
   }
 
-  public function getUserById($userid){
+  public function getUserById($userid)
+  {
     $res = $this->db->get_where("customers", array("id" => $userid));
     return $res->result_array();
   }
 
-  public function addImage($data){
+  public function addImage($data)
+  {
     //INSERT INTO Images (itemid, imagePath) VALUS();
     $insert = $this->db->insert("images", $data);
-    if($insert)
+    if ($insert)
       return $this->db->insert_id();
     else return false;
   }
@@ -34,24 +36,29 @@ class Home_model extends CI_Model
 
   public function getCategoryById($id)
   {
-    $res = $this->db->get_where("categories", array("id"=>$id));
+    $res = $this->db->get_where("categories", array("id" => $id));
     return $res->row();
   }
 
   public function editCategory($id, $category)
   {
-    $this->db->update("categories", array("category"=>$category), array("id"=>$id));
+    $this->db->update("categories", array("category" => $category), array("id" => $id));
     //UPDATE Categories SET category= $category WHERE id=$id;
   }
 
   public function deleteCategory($id)
   {
-    $this->db->delete("categories", array("id"=>$id));
+    $this->db->delete("categories", array("id" => $id));
   }
 
   public function getFullInfo($id)
   {
-    $this->db->delete("categories", array("id"=>$id));
+    $this->db->delete("categories", array("id" => $id));
   }
-  
+
+  public function getItems()
+  {
+    $res = $this->db->get('items');
+    return $res->result_array();
+  }
 }

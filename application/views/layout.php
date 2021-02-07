@@ -16,10 +16,6 @@
         <a class="nav-link" href="<?php echo site_url("home/showUserForm2"); ?>">Выбор пользователя2</a>
         <a class="nav-link" href="<?php echo site_url("home/selectImage"); ?>">Загрузка изображений</a>
         <a class="nav-link" href="<?php echo site_url("home/about"); ?>">О проекте</a>
-        <a class="nav-link" href="<?php echo site_url("home/registration"); ?>">Регистрация</a>
-        <a class="nav-link" href="<?php echo site_url("home/useCustomClass"); ?>">Загрузить пользователя</a>
-        <a class="nav-link" href="<?php echo site_url("home/showCategories"); ?>">Категории</a>
-        <a class="nav-link" href="<?php echo site_url("home/setUserData"); ?>">Использоване сессий</a>
       </div>
     </div>
   </nav>
