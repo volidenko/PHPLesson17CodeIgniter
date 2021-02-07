@@ -79,7 +79,7 @@ class Home extends CI_Controller {
     
     public function about(){
         $data["viewName"]="about";
-        $data["viewData"]=array("title"=>"Пример окна компоновки","text"=>"Этот пример демонстрирует возможность");
+        $data["viewData"]=array("title"=>"Пример окна компоновки","text"=>"Этот пример демонстрирует возможность загрузки части страницы в страницу компоновки");
         $data["viewData"]["cities"]=array("Киев", "Кривой Рог","Кропивницкий");
         $this->load->view("layout", $data);
     }
